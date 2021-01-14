@@ -8,7 +8,6 @@
 
 body {
   min-height: 100vh;
-
   background-color: rgb(241, 241, 241);
   display: flex;
   align-items: center;
@@ -22,9 +21,9 @@ body {
 
   &__card {
     position: absolute;
+    perspective: 1000px;
     height: 100%;
     width: 30%;
-    perspective: 1000px;
 
     &:nth-of-type(1) {
       height: 80%;
@@ -79,7 +78,7 @@ body {
       left: 0;
       background-image: url("./boats.jpg");
       background-size: auto 110%;
-      box-shadow: -1vw 0.5vw 1vw rgba(0, 0, 0, 0.3);
+      box-shadow: -2px 0px 7px 1px rgba(0, 0, 0, 0.4);
 
       &--main {
         height: 100%;
@@ -93,7 +92,8 @@ body {
         width: 15%;
         transform: rotateY(-60deg) translateX(-100%);
         transform-origin: 0 50%;
-        filter: brightness(50%);
+        filter: brightness(60%);
+        box-shadow: -12px 0px 12px 1px rgba(0, 0, 0, 0.4);
       }
     }
   }
