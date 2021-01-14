@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+
+  background-color: rgb(241, 241, 241);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.triptych {
+  position: relative;
+  width: 80%;
+  padding-top: 45%;
+
+  &__card {
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    perspective: 1000px;
+
+    &:nth-of-type(1) {
+      height: 80%;
+      top: 10%;
+      left: 18%;
+      width: 15%;
+
+      .triptych__card__face--main {
+        background-position: 15% 50%;
+        background-size: auto 110%;
+      }
+
+      .triptych__card__face--side {
+        background-position: 8.8% 50%;
+        background-size: auto 110%;
+      }
+    }
+
+    &:nth-of-type(2) {
+      top: 0;
+      left: 35%;
+
+      .triptych__card__face--main {
+        background-position: 50% 0%;
+      }
+
+      .triptych__card__face--side {
+        background-position: 29% 0;
+      }
+    }
+
+    &:nth-of-type(3) {
+      height: 80%;
+      top: 10%;
+      left: 63%;
+      width: 15%;
+
+      .triptych__card__face--main {
+        background-position: 85% 50%;
+        background-size: auto 110%;
+      }
+
+      .triptych__card__face--side {
+        background-position: 65% 50%;
+        background-size: auto 110%;
+      }
+    }
+
+    &__face {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url("./boats.jpg");
+      background-size: auto 110%;
+      box-shadow: -1vw 0.5vw 1vw rgba(0, 0, 0, 0.3);
+
+      &--main {
+        height: 100%;
+        width: 100%;
+        transform: rotateY(30deg);
+        transform-origin: 0 50%;
+      }
+
+      &--side {
+        height: 100%;
+        width: 15%;
+        transform: rotateY(-60deg) translateX(-100%);
+        transform-origin: 0 50%;
+        filter: brightness(50%);
+      }
+    }
+  }
+}
